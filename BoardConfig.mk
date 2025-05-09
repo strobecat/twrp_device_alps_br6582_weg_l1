@@ -50,18 +50,14 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery.fstab
 
 # TWRP stuff
-TW_EXTRA_LANGUAGES := true
 TW_THEME := portrait_hdpi
 TW_BRIGHTNESS_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto/gadget/lun0/file
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
+TW_EXTRA_LANGUAGES := true
 TW_DEFAULT_LANGUAGE := zh_CN
-TW_EXCLUDE_BASH := true
-TW_EXCLUDE_FB2PNG := true
 TW_INCLUDE_NTFS_3G := true
-TW_EXCLUDE_CRYPTO := true
+TW_EXCLUDE_ENCRYPTED_BACKUPS := true
 TW_EXCLUDE_NANO := true
-TW_EXCLUDE_TWRPAPP := true
-TW_EXCLUDE_SUPERSU := true
-TWRP_INCLUDE_LOGCAT := false
-TARGET_USES_LOGD := false
+TW_EXCLUDE_TZDATA := true
+TW_EXCLUDE_BASH := true
