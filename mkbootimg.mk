@@ -25,7 +25,7 @@ $(recovery_kernel).mtk.header: $(recovery_kernel)
 
 $(recovery_kernel).mtk: $(recovery_kernel).mtk.header
 	$(call pretty,"Adding MTK header to recovery kernel.")
-	cat $(recovery_kernel).mtk.header $(recovery_kernel) > $@
+	$(hide) cat $(recovery_kernel).mtk.header $(recovery_kernel) > $(recovery_kernel).mtk
 
 $(recovery_ramdisk).mtk.header: $(recovery_ramdisk)
 	size=$$($(call get-file-size,$(recovery_ramdisk))); \
@@ -33,7 +33,7 @@ $(recovery_ramdisk).mtk.header: $(recovery_ramdisk)
 
 $(recovery_ramdisk).mtk: $(recovery_ramdisk).mtk.header
 	$(call pretty,"Adding MTK header to recovery ramdisk.")
-	cat $(recovery_ramdisk).mtk.header $(recovery_ramdisk) > $@
+	$(hide) cat $(recovery_ramdisk).mtk.header $(recovery_ramdisk) > $(recovery_ramdisk).mtk
 
 INTERNAL_MTK_RECOVERYIMAGE_ARGS := \
 	$(addprefix --second ,$(INSTALLED_2NDBOOTLOADER_TARGET)) \
