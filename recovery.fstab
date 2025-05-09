@@ -1,0 +1,8 @@
+/system       ext4 /dev/block/mmcblk0p6
+/system_image emmc /dev/block/mmcblk0p6
+/data         ext4 /dev/block/mmcblk0p3
+/internal_sd  vfat /dev/block/mmcblk0p4 flags=storage;settingsstorage;display="Internal Storage"
+/cache        ext4 /dev/block/mmcblk0p2
+/custom       ext4 /dev/block/mmcblk0p2 flags=backup=1;display="Custom"
+/external_sd  auto /dev/block/mmcblk1 /dev/block/mmcblk1p1 flags=storage;removable
+/usb-otg      auto /dev/block/sda /dev/block/sda1 flags=storage;removable
