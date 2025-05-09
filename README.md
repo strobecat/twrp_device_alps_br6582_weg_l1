@@ -1,3 +1,3 @@
 # TWRP device tree for smart-pen
 MT6582  
-`repack-MTK.pl` is taken from bgcngm/mtk-tools@09d344dd3dea18e69635639728fa29d83030a83a
+`mkbootimg.mk` is taken from ridon/ridon-device-mediatek-common-mt65xx@9ef76ebb67b01d92c532cf0c019377bfc3d14e3b and tuned for omnirom 5.1
