@@ -1,0 +1,12 @@
+diff --git a/target/product/embedded.mk b/target/product/embedded.mk
+index b60c948..2e69174 100644
+--- a/target/product/embedded.mk
++++ b/target/product/embedded.mk
+@@ -28,7 +28,6 @@ PRODUCT_PACKAGES += \
+     dumpsys \
+     gralloc.default \
+     gzip \
+-    healthd \
+     init \
+     init.environ.rc \
+     init.rc \

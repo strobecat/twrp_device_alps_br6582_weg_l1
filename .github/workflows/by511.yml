@@ -45,6 +45,9 @@ jobs:
           sudo rm -f /usr/bin/python /usr/bin/python3.6 /usr/bin/python3.6m /usr/local/bin/python
           sudo ln -sf /usr/bin/python2.7 /usr/bin/python
           cd $GITHUB_WORKSPACE/twrp
+          pushd build
+          patch -p1 < ../device/alps/br6582_weg_l1/.github/workflows/disable-healthd.patch
+          popd
           source build/envsetup.sh
           lunch omni_br6582_weg_l1-eng
           mka -j$(nproc --all) recoveryimage
